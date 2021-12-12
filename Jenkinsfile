@@ -23,7 +23,7 @@ pipeline {
                 bat "git config --global user.name \"Jenkins User\""
                 bat "git add ."
                 bat "git commit -m \"Jenkins changes\""
-                bat "git push"
+                bat "git push origin master"
             }
         }
         
