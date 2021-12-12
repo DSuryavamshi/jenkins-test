@@ -27,7 +27,7 @@ def test_rating(df):
 
 
 def test_year(df):
-    dt.validate(df['year'], str)
+    dt.validate(df['year'], int)
 
 
 def test_runtime(df):
