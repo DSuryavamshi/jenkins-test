@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Testing the processed csv') {
             steps {
-                bat "python test_processed_movies_data.py"
+                bat "pytest -v test_processed_movies_data.py"
             }
         }
         stage('Pushinh the new file to the repository') {
