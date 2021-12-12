@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                cmd_exec(sh 'pytest test_movies_df.py')
+                cmd_exec('sh "pytest -v test_movies_df.py"')
             }
         }
     }
