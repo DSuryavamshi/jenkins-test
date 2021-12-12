@@ -16,6 +16,11 @@ pipeline {
             steps {
                 bat "pytest -v test_processed_movies_data.py"
             }
+        }  
+        stage('Complete') {
+            steps {
+                bat "echo complete"
+            }
         }     
     }
 }
