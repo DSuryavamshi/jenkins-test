@@ -3,7 +3,8 @@ pipeline {
 
     stages {
         stage('Testing the csv file') {
-            steps {
+            steps {                
+                bat "git checkout master"
                 bat "pytest -v test_movies_df.py"
             }
         }
