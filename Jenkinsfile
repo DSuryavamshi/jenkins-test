@@ -17,11 +17,20 @@ pipeline {
                 bat "pytest -v test_processed_movies_data.py"
             }
         }  
-        stage('Complete') {
+        stage('Push new changes') {
             steps {
-                bat "echo complete!"
-                bat "dir"
+                bat "git config user.name \"Jenkins User\""
+                bat "git config user.email \"jenkins@system.com\""
+                bat "git add ."
+                bat "git commit -m \"Jenkins Changes\""
+                bat "git push"
             }
-        }     
+        }
+        // stage('Complete') {
+        //     steps {
+        //         bat "echo complete!"
+        //         bat "dir"
+        //     }
+        // }     
     }
 }
