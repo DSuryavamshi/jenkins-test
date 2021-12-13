@@ -20,6 +20,7 @@ pipeline {
         stage('Complete') {
             steps {
                 bat "echo complete!"
+                bat "dir"
             }
         }     
     }
